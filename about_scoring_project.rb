@@ -41,7 +41,6 @@ def score(dice)
   six = 0
 
   dice.each do |ball|
-    puts sum
     ball  == 1 ?  one  += 1 : one -= 2
     two   += 1 if ball == 2
     three += 1 if ball == 3
