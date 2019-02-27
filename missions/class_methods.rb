@@ -1,21 +1,18 @@
-class Treatment
-  def converting_to_string()
+require 'pry'
+require 'json'
 
-  end
+class Treatment
   def read(file)
-    require 'json'
     string = ''
     data = File.readlines(file)
     
-    data.each do |line|
-      string = string + line
+    data.each do |elem|
+      elem = elem.strip
+      string = string + elem
     end
-
-    # data = data.readline
-    # data.close
-    puts string
-    # data = JSON.parse(data)
-    puts ('a' + 'b')
+    
+    new_hash = JSON.parse(string)
+    puts new_hash
   end
 end
 
